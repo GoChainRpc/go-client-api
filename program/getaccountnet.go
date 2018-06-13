@@ -18,7 +18,7 @@ func main() {
 	flag.Parse()
 
 	if (strings.EqualFold("", *address) && len(*address) == 0) || (strings.EqualFold("", *grpcAddress) && len(*grpcAddress) == 0) {
-		log.Fatalln("./get-asset-issue-by-account -grpcAddress localhost" +
+		log.Fatalln("./get-account-net -grpcAddress localhost" +
 			":50051 -address <account address>")
 	}
 
@@ -26,8 +26,7 @@ func main() {
 	client.Start()
 	defer client.Conn.Close()
 
-	assetIssueList := client.GetAssetIssueByAccount(*address)
+	accountNet := client.GetAccountNet(*address)
 
-	fmt.Printf("asset issue list: %v\n",
-		assetIssueList)
+	fmt.Printf("account net: %v\n", accountNet)
 }

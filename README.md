@@ -1,4 +1,7 @@
-## go-client-api
+## go-client-api ![](https://img.shields.io/badge/progress-21%25-red.svg)
+
+<strong style="color: red;">**WARNING: The project is not finished
+yet**</strong>
 
 > The Golang java-tron gRPC client
 
@@ -38,5 +41,5 @@ Example:
 
 ```sh
 go get -u github.com/tronprotocol/go-client-api
-go run program/getnowblock.go -grpcAddress 47.254.16.55:50051
+go run program/getnowblock.go -grpcAddress localhost:50051
 ```
